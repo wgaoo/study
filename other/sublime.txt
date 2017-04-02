@@ -5,13 +5,8 @@ sublime使用方法
 
 -----------------------------------------
 使用github
-	1）安装msysgit（windows的git），地址http://msysgit.github.io/
-	2）配置git的环境变量，使用【开始】->Git Bash查找到github地址，bin/cmd添加到环境变量中
-	3）在Git Bash中执行：
-		git config --global user.name "wgaoo" 
-		git config --global user.email "w_gao@foxmail.com"
-		git config --global push.default matching
-		ssh-keygen -t rsa
+	通过使用GitGutter工具，使用github：https://github.com/jisaacks/GitGutter
+
 		
 
 
