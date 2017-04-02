@@ -1,4 +1,4 @@
 # studygo
-to study go
+to study
 
 here come the readme
