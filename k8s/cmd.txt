@@ -1,0 +1,2 @@
+kubectl scale 升级操作
+kubectl rolling-update frontend --image=image:v2 滚动升级

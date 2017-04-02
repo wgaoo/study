@@ -1,0 +1,26 @@
+并发编程，垃圾回收，编译型
+服务端语言的开发
+
+帮助获取路径
+code.google.com/p/go-wiki 无法访问
+doc.google.com
+http://studygolang.com/ 获取帮助信息
+
+1）源码安装
+2）标准包安装
+3）第三方工具安装
+
+采用标准包安装，在http://studygolang.com/获取msi安装包
+cmd输入go env，查看go语言自动导出的路径
+
+1）下载go1.7rc6.windows-386.msi，并安装
+2）设置环境变量：C:\Go\bin
+3）修改GOPATH环境变量
+
+编译并运行helloworld
+1）godoc -http=:8080
+2）配置sublime环境
+	安装package control
+	install->goSublime
+3）编写hello.go
+4）ctru+b弹出命令行界面，go run hello.go
