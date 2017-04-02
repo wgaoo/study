@@ -1,0 +1,43 @@
+node type:
+
+前端：
+	PHP-frontend   PHP-frontend   PHP-frontend
+后端：
+	Redis-Master
+	Redis-Slave    Redis-Slave
+
+使用k8s部署,k8s服务：
+	Master：
+		apiserver
+		controller manager
+		schedulter
+	Node：
+		kubelet
+		kube-proxy
+1)创建redis-master Pod和服务
+	redis-master-controller.yaml
+		apiVersion: v1
+		kind:ReplicationCrontroller
+		metadata:
+			name: redis-master
+			labels:
+				name: redis-master
+		spec:
+			replications:1  #只创建一个副本
+			......
+
+		kubectl create -f xxx.yaml
+
+	redis-master-service.yaml
+		......
+		
+		kubectl get services
+2)创建redis-slave Pod和服务
+	redis-slave-controller.yaml
+		replications:2
+	redis-slave-service.yaml
+3)创建frontend Pod和服务
+	frontend-controller.yaml
+		replications:3
+	frontend-service.yaml
+
