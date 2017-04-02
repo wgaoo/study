@@ -1,4 +1,2 @@
-# studygo
-to study
-
-here come the readme
+# study
+save my study code
