@@ -18,9 +18,11 @@ cmd输入go env，查看go语言自动导出的路径
 3）修改GOPATH环境变量
 
 编译并运行helloworld
-1）godoc -http=:8080
+1）godoc -http=:8080，可在本机查看go的帮助文档
 2）配置sublime环境
 	安装package control
 	install->goSublime
 3）编写hello.go
 4）ctru+b弹出命令行界面，go run hello.go
+
+#首字母消息的为private，大写为public
