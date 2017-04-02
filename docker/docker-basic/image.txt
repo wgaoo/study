@@ -1,0 +1,37 @@
+=================================
+容器(container)
+docker search centos
+docker pull centos
+docker run centos /bin/echo "hello world"
+docker ps -a
+docker run --name mydocker -it centos /bin/bash
+ip ad li    				#查看容器的ip地址，因为没有iptables命令
+docker start 627c887e4a2d  	#启动容器
+docker run -d --name mydocker1 centos 	# -d 指定从后台启动
+docker run -d --name mynginx nginx		# 
+进入容器：
+	docker attach b1232ad6a24f				# 进入容器，这种方法有时会失败，需要，可以通过：
+		docker inspect --format "{{.State.Pid}}" mynginx   		获得容器的pid
+		nsenter --target 4055 --mount --uts --ipc --net --pid	进入容器
+docker stop 627c887e4a2d				# 停止容器
+brctl show: 查看docker的网桥
+
+=====================================
+镜像(image)
+	docker save ${cid} > ubuntu.tar 		#导出镜像，为镜像id
+	docker export ${iid} > mynginx.tar 		#导出容器，为容器id
+	
+=====================================
+docker网络：
+	iptables -t nat -L -n ：可以看到对docker做了一个nat转换，在容器中可以上网
+	在容器中 ip ro li,可以看到容器中路由到docker0网桥地址
+	docker run -d -P --name mynginx1 nginx, docker ps -l 可以看到随机的端口映射
+	看到 0.0.0.0:1025->80,表示将80端口映射到1025,访问EIP的1025，可以看到nginx界面
+	docker run -d -p 91:80 --name mynginx2 nginx ,同样可访问EIP的91端口
+
+=====================================
+nginx：
+	/etc/nginx/nginx.conf
+	/etc/nginx/conf.d/default.conf,可以看到 root   /usr/share/nginx/html
+
+

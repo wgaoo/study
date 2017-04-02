@@ -1,0 +1,14 @@
+systemctl enable docker.service
+systemctl start docker.service
+
+[root@gw-centos7 /]# lsblk 
+NAME                        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+xvda                        202:0    0   40G  0 disk 
+├─xvda1                     202:1    0   36G  0 part /
+└─xvda2                     202:2    0    4G  0 part [SWAP]
+loop0                         7:0    0  100G  0 loop 
+└─docker-202:1-1483215-pool 253:0    0  100G  0 dm   
+loop1                         7:1    0    2G  0 loop 
+└─docker-202:1-1483215-pool 253:0    0  100G  0 dm
+说明使用的是两个稀疏文件，挂载在loop0和loop1，作为容器的存储卷
+
