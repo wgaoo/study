@@ -1,0 +1,40 @@
+=========================================
+sublime使用方法
+
+安装package control
+
+-----------------------------------------
+使用github
+	1）安装msysgit（windows的git），地址http://msysgit.github.io/
+	2）配置git的环境变量，使用【开始】->Git Bash查找到github地址，bin/cmd添加到环境变量中
+	3）在Git Bash中执行：
+		git config --global user.name "wgaoo" 
+		git config --global user.email "w_gao@foxmail.com"
+		git config --global push.default matching
+		ssh-keygen -t rsa
+		
+
+
+-----------------------------------------
+开发环境
+	Go语言
+		下载go语言编译工具：go1.7rc6.windows-386.msi，安装
+		在sublime中Install Package->GoSublime
+
+-----------------------------------------
+配置皮肤
+	Theme - Soda和Theme - Flatland
+	1）使用package ctl安装：Theme - Soda或Theme - Flatland，
+		或者在github下载：https://github.com/buymeasoda/soda-theme https://github.com/thinkpixellab/
+	2）修改Sublime Text -> Preferences -> Settings - User，在其中加入如下内容
+		soda：
+			{
+			    "theme": "Soda Light.sublime-theme"
+			}
+			或者：Soda Dark.sublime-theme
+			具体参考github地址
+		Flatland：
+			{
+			  "theme": "Flatland Dark.sublime-theme",
+			  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme"
+			}
