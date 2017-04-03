@@ -1,3 +1,6 @@
+#docker的存储讲解
+参考：http://www.infoq.com/cn/articles/analysis-of-docker-file-system-aufs-and-devicemapper/
+
 systemctl enable docker.service
 systemctl start docker.service
 
