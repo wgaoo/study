@@ -16,8 +16,20 @@
 "color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Dark.tmTheme",
 "draw_centered": false,
 + [Markdown语法](https://github.com/younghz/Markdown)
+http://wowubuntu.com/markdown/#list
 
-##开发环境
++ 写表格
+安装Table Editor
+设置
+Table Editor: Enable for current syntax
+or: Table Editor: Enable for current view
+
+	| name | phone |
+	|------|-------|
+	| one  |     1 |
+	| two  |     2 |
+
+##配置Go语言开发环境
 Go语言
 	下载go语言编译工具：go1.7rc6.windows-386.msi，安装
 	在sublime中Install Package->GoSublime
