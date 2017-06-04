@@ -63,7 +63,8 @@ make
 make install
 echo "/usr/local/sbin/nginx" >> /etc/rc.local
 echo "daemon off;" >> /usr/local/nginx/conf/nginx.conf
-docker commit -m "my nginx" 3687ae5dc519 mynginx:err 将容器制作为镜像
+
+docker commit -m "my nginx" ${CID} mynginx:err 将容器制作为镜像
 docker run -d -p 92:80 mynginx:err
 
 2. 自动构建（Dockerfile）
@@ -82,7 +83,7 @@ docker run -d -p 92:80 mynginx:err
 	    ├── Dockerfile
 	    └── test.tar.gz
 Dockerfile内容
-
+cat Dockerfile
 	# this is my docker file
 	# version 1.o
 	# Author w_gao@foxmail.com
@@ -97,6 +98,7 @@ Dockerfile内容
 	# WORKDIR ~= cd
 	WORKDIR /opt/test
 	RUN touch test-workdir
+	
 docker build -t nginx-file:v1 /opt/docker-file/nginx/
 
 

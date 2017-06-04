@@ -1,3 +1,8 @@
+#总体介绍
+master：etcd（k8s的数据库系统）/ kubernetes-master(kube-apiserver kube-scheduler kube-controller-manager)
+node: kubernetes-node(kubenetes,proxy) flannel
+
+
 #master
 + 环境配置
     host 192.168.163.148 安装etcd server以及kubernetes server，同时安装kubernetes client node，并且还需要安装docker；
